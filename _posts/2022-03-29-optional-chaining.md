@@ -3,9 +3,9 @@ title: "Optinal Chaining in Javascript"
 date: 2022-03-29
 ---
 
-# What is Optional Chaining in Javascript?
+What is Optional Chaining in Javascript?
 
-Optional Chaining is a new feature of the Javascript language introduced in 2020 that allows for in-line checking of nested object properties. It's a very concise and easy-to-write method that also elegantly allows a program to fai. It avoids the dreaded `cannot read property of undefined` error message when its tries to access a property of an object that does not exist.
+Optional Chaining is a new feature of the Javascript language introduced in 2020 that allows for in-line checking of nested object properties. It's a very concise and easy-to-write method that also elegantly allows a program to fail. It avoids the dreaded `cannot read property of undefined` error message when its tries to access a property of an object that does not exist.
 
 Optional chaining is also known as safe navigation.
 
@@ -16,7 +16,7 @@ Given an object, `animals`, how would you assign and access a nested value of `n
 ```js
 const animals = {
 	cat: {
-		name: "sally",
+		name: "marge",
 		age: 2,
 	},
 	dog: {
@@ -26,7 +26,7 @@ const animals = {
 }
 ```
 
-Without optional chaining you would first check to see if `dog` is a property of `animals`, you would use and `&&` logical operator:
+Without optional chaining you would first check to see if `dog` is a property of `animals` with a ternary expression:
 
 `const name = animals.dog ? animals.dog.name : undefined`
 
@@ -68,7 +68,7 @@ This is what will be logged:
 | index     | Value     |
 | --------- | --------- |
 | dogName   | 'bob'     |
-| catName   | 'sally'   |
+| catName   | 'marge'   |
 | duckName  | undefined |
 | dogWeight | undefined |
 
