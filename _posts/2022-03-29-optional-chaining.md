@@ -1,5 +1,5 @@
 ---
-title: "Optinal Chaining in Javascript"
+title: "Optional Chaining in Javascript"
 date: 2022-03-29
 ---
 
@@ -36,9 +36,9 @@ With optional chaining, this can be done very efficiently:
 
 `const name = animals.dog?.name`
 
-Optional chaining syntax is using the `?` to check if `dog` exists as a property of `animals`. If it isn't, it will return `undefined` and the object chaining _short circuits_ so that `name` is never called. If `dog` doesexist as a property of `animals`, then the program will proceed and attempt to get `dog`'s property of `name`.
+Optional chaining syntax is using the `?` to check if `dog` exists as a property of `animals`. If it isn't, it will return `undefined` and the object chaining _short circuits_ so that `name` is never called. If `dog` does exist as a property of `animals`, then the program will proceed and attempt to get `dog`'s property of `name`.
 
-At this point optional chaining does not care if `name` exists as a property -- and in fact there is not way to optional chain the start and end of object drilling. Both these syntaxes are **incorrect**:
+At this point optional chaining does not care if `name` exists as a property -- and in fact there is notway to optional chain the start and end of object drilling. Both these syntaxes are **incorrect**:
 
 `const name = animals?.dog?.name`
 
@@ -83,7 +83,7 @@ obj.func?.(args)
 
 The quirky thing to note is that optional chaining requires both symbols `?` and `.` even in situations when dot notation is not used, such as in accessing an array with an index.
 
-Optional chaining (a.k.a. safe navigation) may have slightly different syntax. In Ruby, instead of `?.` the language uses `&.` for [interesting reasons](https://stackoverflow.com/questions/33735228/why-does-ruby-use-its-own-syntax-for-safe-navigation-operator). In many languages, though, something similar to `?` is used.
+Optional chaining (a.k.a. safe navigation) may have slightly different syntax in different languages. In Ruby, instead of `?.` the language uses `&.` for [interesting reasons](https://stackoverflow.com/questions/33735228/why-does-ruby-use-its-own-syntax-for-safe-navigation-operator). In many languages, though, something similar to `?` is used.
 
 ---
 
