@@ -5,7 +5,7 @@ date: 2022-04-05
 
 React Router version 6 makes it easy to nest routes. Nested routes enables you to have multiple components render on the same page with route parity. This is useful for app experiences where you want the user to be able to "drill down" into content and not lose their way, such as in forums or blogs.
 
-![1](../assets/imgs/Frame%205.png)
+![1](/assets/imgs/Frame%205.png)
 
 ## Installing React Router
 
@@ -60,7 +60,7 @@ export default function App() {
 }
 ```
 
-![1](../assets/imgs/Frame%201.png)
+![1](/assets/imgs/Frame%201.png)
 
 > You will have to import the Home, About, and Posts components at the top of your page fpr this to work.
 
@@ -109,7 +109,7 @@ Now we can learn how these nested routes can pass information to each other and 
 
 ## Nesting routes with \<Outlet/>
 
-![1](../assets/imgs/Frame%202.png)
+![1](/assets/imgs/Frame%202.png)
 
 `/posts/new` points to a page to create new posts. This page will likely contain a controlled form to submit a new post.
 
@@ -179,7 +179,7 @@ Now, on to the next nested route, `:postId`.
 
 ## Nested Routes and useParams
 
-![1](../assets/imgs/Frame%204.png)
+![1](/assets/imgs/Frame%204.png)
 
 `/posts/123` will display a specific post. Our `path` prop for this Route is a parameter, dentote by the prefix `":"` in the path:
 
@@ -240,7 +240,7 @@ Now our route structure looks like this:
 
 As expected, `<Comments />` now renders as a child route of `<Post />`. Of course, now in `<Post />` we have to add an `<Outlet />` in order to render child routes. This will look something like:
 
-![1](../assets/imgs/Frame%205.png)
+![1](/assets/imgs/Frame%205.png)
 
 But wait, we added two routes, why is there no path for `<PostIndex />`?
 
@@ -250,7 +250,7 @@ But wait, we added two routes, why is there no path for `<PostIndex />`?
 
 In this case, when there is no `/comments` path, the render will look like:
 
-![1](../assets/imgs/Frame%206.png)
+![1](/assets/imgs/Frame%206.png)
 
 You could put a clean watermark in here for nicer UX, or put some interesting statistics about the Post, it's up to you! But you have the option to have something there and not some buggy-looking white space.
 
